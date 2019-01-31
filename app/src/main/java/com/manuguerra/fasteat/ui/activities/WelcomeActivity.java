@@ -1,4 +1,4 @@
-package com.manuguerra.fasteat;
+package com.manuguerra.fasteat.ui.activities;
 
 
 import android.content.Intent;
@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
+
+import com.manuguerra.fasteat.R;
 
 public class WelcomeActivity extends AppCompatActivity implements View.OnClickListener {
 

@@ -1,32 +1,28 @@
-package com.manuguerra.fasteat;
+package com.manuguerra.fasteat.ui.activities;
 
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.text.InputType;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.util.Patterns;
+
+import com.manuguerra.fasteat.R;
+import com.manuguerra.fasteat.Utilities;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     public final static String EMAIL_KEY= "email";
     public final static String PASSWORD_KEY="password";
-    final static int size_password=6;
     private TextView login;
     private EditText email_et;
     private EditText password_et;
@@ -73,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     register_btn.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorWhite));
                 }
                 else {
-
                     activity_main.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorWhite));
                     email_et.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorTotalBlack));
                     password_et.setTextColor(ContextCompat.getColor(MainActivity.this, R.color.colorTotalBlack));
@@ -87,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
-
     }
 
 
@@ -112,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String email=email_et.getText().toString();
         String password=password_et.getText().toString();
 
-        if(emailControll(email)&& passwordControll(password)){
+        if(Utilities.emailControll(email)&& Utilities.passwordControll(password)){
             Toast.makeText(this, getString(R.string.login_done), Toast.LENGTH_SHORT).show();
 
             Intent intent=new Intent(this, WelcomeActivity.class);
@@ -124,13 +118,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private boolean emailControll(String email){
-        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
-    }
-
-    private boolean passwordControll(String password){
-        //6 CARATTERI
-        if(password.length()<=size_password)return false;
-        else  return true;
-    }
 }
