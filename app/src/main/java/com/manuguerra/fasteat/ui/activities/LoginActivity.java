@@ -39,6 +39,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         //attach to this Activity the activity_layout.xml file
         setContentView(R.layout.activity_login);
+        getSupportActionBar().setTitle(R.string.Login);
 
         //dichiarazione componenti xml
         email_et=findViewById(R.id.email_et);
