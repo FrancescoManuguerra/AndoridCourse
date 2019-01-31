@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="email_hint">Insert e-mail</string>
+    <string name="password_hint">Insert password</string>
+    <string name="Login">Login</string>
+    <string name="Register">Register</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="name_app_launcher">Fasteat</string>
+    <string name="login_done">Login effettuato</string>
+    <string name="error_email">Email errata</string>
+    <string name="error_password">Password errata</string>
+    <string name="Welcome">Welcome</string>
+    <string name="register_number">Number</string>
+    <string name="Dark_mode">dark mode </string>
+</resources>
