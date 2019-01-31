@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.manuguerra.fasteat">
 
@@ -7,38 +8,46 @@
         android:label="@string/name_app_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
-
-        <activity android:name=".ui.activities.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".ui.activities.RegisterActivity"/>
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activities.LoginActivity"/>
+        <activity android:name=".ui.activities.RegisterActivity" />
         <activity android:name=".ui.activities.WelcomeActivity">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <action android:name="android.intent.action.SENDTO"/>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="mailto"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.SEND"/>
-                <data android:mimeType="plain/text"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.SEND_MULTIPLE"/>
-                <data android:mimeType="plain/text"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.SENDTO" />
+                <action android:name="android.intent.action.VIEW" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="mailto" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <data android:mimeType="plain/text" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <data android:mimeType="plain/text" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
+        <activity android:name=".ui.activities.MainActivity">
 
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".ui.activities.CheckoutActivity" />
+        <activity android:name=".ui.activities.ShopActivity"></activity>
     </application>
+
 </manifest>

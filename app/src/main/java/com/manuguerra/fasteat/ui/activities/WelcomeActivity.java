@@ -35,8 +35,8 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
             email=data.toString();
             email=email.replace("mailto:","");
         }else {
-            email = intent.getStringExtra(MainActivity.EMAIL_KEY);
-            password = intent.getStringExtra(MainActivity.PASSWORD_KEY);
+            email = intent.getStringExtra(LoginActivity.EMAIL_KEY);
+            password = intent.getStringExtra(LoginActivity.PASSWORD_KEY);
         }
 
         welcome_email_tv.setText(email);
